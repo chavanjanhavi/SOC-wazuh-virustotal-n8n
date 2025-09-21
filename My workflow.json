@@ -1,0 +1,328 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-windows",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -976,
+        -80
+      ],
+      "id": "89a2c939-aad1-4323-bb61-55d94a66e93d",
+      "name": "WAZUH",
+      "webhookId": "dc7ab29c-9084-4efb-99c5-3188aeeddb9d"
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = {\n  \"_index\": \"wazuh-alerts-4.x-2025.09.20\",\n  \"_id\": \"VqZiZpkBu8_VJ7LDchQe\",\n  \"_score\": 1,\n  \"_source\": {\n    \"syscheck\": {\n      \"size_before\": \"68\",\n      \"uname_after\": \"usertr22\",\n      \"mtime_after\": \"2025-09-20T09:09:13\",\n      \"inode_before\": 1312656,\n      \"size_after\": \"75\",\n      \"gid_after\": \"1000\",\n      \"md5_before\": \"44d88612fea8a8f36de82e1278abb02f\",\n      \"diff\": \"1c1,2\\n< X5O!P%@AP[4\\\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*\\n\\\\ No newline at end of file\\n---\\n> X5O!P%@AP[4\\\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*\\n> asdfg\\n\",\n      \"sha256_before\": \"275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f\",\n      \"mtime_before\": \"2025-09-20T09:07:45\",\n      \"mode\": \"realtime\",\n      \"path\": \"/home/usertr22/Downloads/eicar(1).com\",\n      \"sha1_after\": \"090405d30cfb28a39c699dbf13b568bc4afb21b2\",\n      \"changed_attributes\": [\n        \"size\",\n        \"inode\",\n        \"mtime\",\n        \"md5\",\n        \"sha1\",\n        \"sha256\"\n      ],\n      \"gname_after\": \"usertr22\",\n      \"uid_after\": \"1000\",\n      \"perm_after\": \"rw-rw-r--\",\n      \"event\": \"modified\",\n      \"md5_after\": \"373a7394d08159a62072a87a847a749f\",\n      \"sha1_before\": \"3395856ce81f2b7382dee72602f798b642f14140\",\n      \"sha256_after\": \"44b3d2f15ff71aa2de5c919864a4e889fad25a6f943a7ed87963d472fc9bc1a9\",\n      \"inode_after\": 1314502\n    },\n    \"agent\": {\n      \"ip\": \"192.168.110.239\",\n      \"name\": \"agentkali\",\n      \"id\": \"001\"\n    },\n    \"manager\": {\n      \"name\": \"ubuntuuu\"\n    },\n    \"rule\": {\n      \"mail\": false,\n      \"level\": 7,\n      \"pci_dss\": [\n        \"11.5\"\n      ],\n      \"hipaa\": [\n        \"164.312.c.1\",\n        \"164.312.c.2\"\n      ],\n      \"tsc\": [\n        \"PI1.4\",\n        \"PI1.5\",\n        \"CC6.1\",\n        \"CC6.8\",\n        \"CC7.2\",\n        \"CC7.3\"\n      ],\n      \"description\": \"Integrity checksum changed.\",\n      \"groups\": [\n        \"ossec\",\n        \"syscheck\",\n        \"syscheck_entry_modified\",\n        \"syscheck_file\"\n      ],\n      \"nist_800_53\": [\n        \"SI.7\"\n      ],\n      \"gdpr\": [\n        \"II_5.1.f\"\n      ],\n      \"firedtimes\": 272,\n      \"mitre\": {\n        \"technique\": [\n          \"Stored Data Manipulation\"\n        ],\n        \"id\": [\n          \"T1565.001\"\n        ],\n        \"tactic\": [\n          \"Impact\"\n        ]\n      },\n      \"id\": \"550\",\n      \"gpg13\": [\n        \"4.11\"\n      ]\n    },\n    \"decoder\": {\n      \"name\": \"syscheck_integrity_changed\"\n    },\n    \"full_log\": \"File '/home/usertr22/Downloads/eicar(1).com' modified\\nMode: realtime\\nChanged attributes: size,inode,mtime,md5,sha1,sha256\\nSize changed from '68' to '75'\\nOld modification time was: '1758359265', now it is '1758359353'\\nOld inode was: '1312656', now it is '1314502'\\nOld md5sum was: '44d88612fea8a8f36de82e1278abb02f'\\nNew md5sum is : '373a7394d08159a62072a87a847a749f'\\nOld sha1sum was: '3395856ce81f2b7382dee72602f798b642f14140'\\nNew sha1sum is : '090405d30cfb28a39c699dbf13b568bc4afb21b2'\\nOld sha256sum was: '275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f'\\nNew sha256sum is : '44b3d2f15ff71aa2de5c919864a4e889fad25a6f943a7ed87963d472fc9bc1a9'\\n\",\n    \"input\": {\n      \"type\": \"log\"\n    },\n    \"@timestamp\": \"2025-09-20T09:09:09.271Z\",\n    \"location\": \"syscheck\",\n    \"id\": \"1758359349.2039439\",\n    \"timestamp\": \"2025-09-20T09:09:09.271+0000\"\n  },\n  \"fields\": {\n    \"syscheck.mtime_after\": [\n      \"2025-09-20T09:09:13.000Z\"\n    ],\n    \"syscheck.mtime_before\": [\n      \"2025-09-20T09:07:45.000Z\"\n    ],\n    \"timestamp\": [\n      \"2025-09-20T09:09:09.271Z\"\n    ],\n    \"@timestamp\": [\n      \"2025-09-20T09:09:09.271Z\"\n    ]\n  }\n}\n// Example: return it so n8n can use it\nreturn [{ json: data }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        -80
+      ],
+      "id": "8916bf59-47be-4ac0-bfd2-6fa18df3dfdc",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.virustotal.com/api/v3/files/{{ $json._source.syscheck.sha256_after }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "virusTotalApi",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -560,
+        -80
+      ],
+      "id": "8711a74f-2b92-4f1f-80a8-eb2aaf9617fd",
+      "name": "HTTP Request",
+      "credentials": {
+        "virusTotalApi": {
+          "id": "I0UWTpWIHqZkbMVN",
+          "name": "VirusTotal account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -352,
+        -80
+      ],
+      "id": "83c6da44-957a-44e8-b899-842e11a95417",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "html": "<!doctype html>\n<html>\n<head>\n  <meta charset=\"utf-8\"/>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n  <style>\n    body { background:#111; font-family: Arial, sans-serif; margin:0; padding:20px; }\n    .card {\n      background:#1b1b1b;\n      border-radius:10px;\n      padding:20px 24px;\n      color:#eee;\n      max-width:650px;\n      margin:0 auto;\n    }\n    h2 {\n      color:#00cfff;\n      font-size:20px;\n      margin-top:0;\n      display:flex;\n      align-items:center;\n      gap:8px;\n    }\n    .field { margin:8px 0; }\n    .field strong { color:#bbb; }\n    .status { color:#ff4d4d; font-weight:bold; }\n    .tags { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }\n    .tag {\n      background:#333;\n      color:#ddd;\n      padding:4px 10px;\n      border-radius:6px;\n      font-size:12px;\n    }\n    .stats { margin-top:8px; color:#aaa; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>🧪 File Threat Summary</h2>\n\n    <div class=\"field\"><strong>File:</strong> FAMA.pdf</div>\n    <div class=\"field\"><strong>SHA256:</strong> 275a021bbfb6489e54d471899fdb9d1663fc695ec2fe2a2c4538aabf651fd0f</div>\n    <div class=\"field\"><strong>Reputation:</strong> Good</div>\n    <div class=\"field\"><strong>Threat Label:</strong> eicar_test</div>\n    <div class=\"field\"><strong>Magic Signature:</strong> EICAR virus test files</div>\n    <div class=\"field\"><strong>Status:</strong> <span class=\"status\">Suspicious</span></div>\n\n    <div class=\"field\"><strong>Analysis Stats:</strong></div>\n    <div class=\"stats\">\n      • Malicious: 65<br>\n      • Suspicious: 0<br>\n      • Harmless: 0<br>\n      • Undetected: 4\n    </div>\n\n    <div class=\"field\"><strong>Tags:</strong></div>\n    <div class=\"tags\">\n      <span class=\"tag\">legit</span>\n      <span class=\"tag\">known-distributor</span>\n      <span class=\"tag\">attachment</span>\n      <span class=\"tag\">idle</span>\n      <span class=\"tag\">powershell</span>\n      <span class=\"tag\">long-sleeps</span>\n      <span class=\"tag\">direct-cpu-clock-access</span>\n      <span class=\"tag\">via-tor</span>\n    </div>\n  </div>\n</body>\n</html>\n"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        -64,
+        -240
+      ],
+      "id": "18fe3976-3e3a-43a4-ae27-d1178a03e19a",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "41f3f46e-0745-4f33-826b-e5861e7a6d89"
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -64,
+        80
+      ],
+      "id": "8cf7ed9d-b47a-408e-adb9-6f37a003bc87",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "sendTo": "jennyyy0304@gmail.com",
+        "subject": "Threat detected!!!",
+        "message": "={{ $json.html }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        144,
+        -240
+      ],
+      "id": "3f6c8c75-4815-4e1b-8a6e-fc81fd022562",
+      "name": "Send a message",
+      "webhookId": "7566b2c7-ef9d-439f-bde0-82e85773c9ab",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "FSDaWJgxU4UD9MZd",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        368,
+        -96
+      ],
+      "id": "2d1cf6a9-6405-41a9-802a-ca675397170b",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=⚠️ **File Threat Detected**\n\n**File:** {{ $json.data.attributes.meaningful_name || $json.data.attributes.names[0] || \"Unknown file\" }}\n\n**SHA256:** {{ $json.data.attributes.sha256.slice(0,12) }}...\n\n**Reputation:** {{ $json.data.attributes.reputation }}\n\n**Threat Label:** {{ $json.data.attributes.popular_threat_classification.suggested_threat_label }}\n\n**Magic Signature:** {{ $json.data.attributes.magic }}\n\n**Status:** {{ $json.data.attributes.sandbox_verdicts.Zenbox.category || \"Unknown\" }}\n\n📊 **Analysis Stats:**  \n- Malicious: {{ $json.data.attributes.last_analysis_stats.malicious }}  \n- Suspicious: {{ $json.data.attributes.last_analysis_stats.suspicious }}  \n- Harmless: {{ $json.data.attributes.last_analysis_stats.harmless }}  \n- Undetected: {{ $json.data.attributes.last_analysis_stats.undetected }}\n\n🏷 **Tags:** {{ $json.data.attributes.tags.join(\", \") }}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        144,
+        80
+      ],
+      "id": "ebe0cdec-b220-4c0e-854d-f2d76f13b8e9",
+      "name": "Discord",
+      "webhookId": "faa9d6d4-38ce-4a33-a9d6-e1d39e4432ae",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "MsPNMLiLDaNEfTch",
+          "name": "Discord Webhook account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "WAZUH": [
+      {
+        "json": {
+          "headers": {
+            "host": "jennyyyyy.app.n8n.cloud",
+            "user-agent": "curl/8.15.0",
+            "content-length": "291",
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "103.178.143.212",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "IN",
+            "cf-ray": "9820343d038c41f4-BOM",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-type": "multipart/form-data; boundary=------------------------fde7yaWrwIEdgL2plpNpmB",
+            "x-forwarded-for": "103.178.143.212, 172.69.95.130",
+            "x-forwarded-host": "jennyyyyy.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-37-d47f5fc8c-zjdhc",
+            "x-is-trusted": "yes",
+            "x-real-ip": "103.178.143.212"
+          },
+          "params": {},
+          "query": {},
+          "body": {},
+          "webhookUrl": "https://jennyyyyy.app.n8n.cloud/webhook/webhook-windows",
+          "executionMode": "production"
+        },
+        "binary": {
+          "file": {
+            "mimeType": "application/octet-stream",
+            "fileExtension": "bin",
+            "data": "filesystem-v2",
+            "fileName": "eicar(1).com",
+            "id": "filesystem-v2:workflows/e7kmbrxMoHPFxG0i/executions/temp/binary_data/ac0922fb-46db-4524-8b8b-21f5a3cd1fbb",
+            "fileSize": "75 B"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "WAZUH": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discord": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "121a9275-a4c6-4d27-b75c-98824578989a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3f91216b527c6756f0fc000d0f3cb81ebf24e679564d70c20db1779627b778a7"
+  },
+  "id": "e7kmbrxMoHPFxG0i",
+  "tags": []
+}
