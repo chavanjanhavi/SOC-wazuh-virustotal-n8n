@@ -22,6 +22,15 @@ Here’s the workflow in n8n:
 <img width="1668" height="738" alt="workflow" src="https://github.com/user-attachments/assets/392e382e-b18e-4d37-b96a-2df9a06fc8b0" />
 
 
+Here is the output generated on gmail and discord:
+
+
+<img width="1486" height="770" alt="gmail_op" src="https://github.com/user-attachments/assets/8a9f2fbb-a95b-4425-95d6-619afdcd1424" />
+
+
+<img width="1215" height="630" alt="discord_op" src="https://github.com/user-attachments/assets/ec9b8daa-0eb5-48a3-bfe6-2b715600fe61" />
+
+
 ---
 
 ## 🚀 How It Works
